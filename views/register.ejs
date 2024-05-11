@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+
+    <div class="row vh-100 g-0">
+        <div class="col-lg-6">
+            <div class="row align-items-center justify-content-center h-100 g-0 px-4 px-sm-0">
+                <div class="col col-sm-6 col-lg-7 col-xl-6">
+                    <a href="" class="d-flex justify-content-center mb-4">
+                        <img src="images/logo.png" alt="" width="150">
+                    </a>
+
+                    <div class="text-center mb-5">
+                        <h3 class="fw-bold">Sign Up</h3>
+                        <p class="text-secondary">Create an account.</p>
+                    </div>
+
+                    <form action="/register" method="post">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text icon">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg fs-6" placeholder="Your name" name="name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text icon">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control form-control-lg fs-6" placeholder="Username" name="username">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control form-control-lg fs-6" placeholder="Password"
+                                name="password">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" class="form-control form-control-lg fs-6" placeholder="Confirm password" name="con_password">
+                        </div>
+                        <button class="btn btn-primary btn-lg w-100 l-btn mb-3">Sign Up</button>
+                    </form>
+
+                    <div class="text-center">
+                        <small>Already have an account? <a href="login" class="fw-bold">Log In</a></small>
+                    </div>
+
+                    <div class="position-relative">
+                        <hr class="text-secondary divider">
+                        <div class="divider-content-center">OR</div>
+                    </div>
+
+                    <a class="btn btn-lg btn-outline-secondary btn-outline-custom w-100 mb-3" href="/auth/google" role="button">
+                        <i class="fa-brands fa-google text-danger me-1 fs-6"></i> Sign Up with Google
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 position-relative d-none d-lg-block">
+            <div class="bg-holder" style="background-image: url('images/gojo.jpg');"></div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>

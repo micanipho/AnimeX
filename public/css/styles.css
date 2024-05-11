@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
-    background: #ececec;
+    background-color: #ececec;
 }
 .bg-holder {
     position: absolute;
@@ -12,4 +12,54 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: #7AB2B2;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.btn i {
+    vertical-align: text-top;
+}
+
+.divider-content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0.5rem;
+    background-color: #ececec;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.divider {
+    margin: 2rem 0;
+}
+
+.icon {
+    background-color: #ececec;
+    color: #7AB2B2;
+}
+
+.l-btn {
+    background-color: #4D869C;
+    border-color: #4D869C;
+}
+.btn-outline-custom {
+    color: #31374a;
+}
+.btn-outline-custom:hover {
+    color: #ececec;
+    background-color: #4D869C;
 }
