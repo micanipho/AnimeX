@@ -1,7 +1,18 @@
 <%- include("partials/header") %>
 
-<h1>This is the home page</h1>
+<div class="body">
+    <div class="glass-box">
+        <div class="nav">
+            <a href="" class="logo-img"><img src="images/logo.png" width="200" alt=""></a>
+            <a href="/login" class="navbar-link btn-outline-secondary">Log In</a>
+        </div>
+        <form action="">
+            <div class="search-bar">
+                    <span><a href=""><i class="fa-solid fa-magnifying-glass fa-2xl"></i></a></span>
+                    <input type="search" name="search" class="search-input" placeholder="Search">
+            </div>
+        </form>
+    </div>
+</div>
 
-<a class="btn btn-lg btn-primary" href="/login" role="button">LogIn</a>
-
-/<%- include("partials/footer") %>
+<%- include("partials/footer") %>

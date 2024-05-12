@@ -87,27 +87,60 @@ app.get('/auth/google/home',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/home');
   });
+
+  app.get("/home", (req, res) => {
+    if (req.isAuthenticated()){
+        res.render("home");
+    } else {
+        res.redirect("/login");
+    }
+});
+
+app.get("/logout", (req,res) => {
+     req.logout(function(err) {
+        if (err) { return next(err); }
+            res.redirect('/');
+  });
+});
 
 app.post("/register", (req, res) => {
     const name = req.body.name;
     const username = req.body.username;
-
-     User.register({username: username, name: name}, req.body.password).then( (user) => {
+    if (req.body.password === req.body.con_password){
+      User.register({username: username, name: name}, req.body.password).then( (user) => {
         if(user){
             passport.authenticate("local")(req, res, () => {
               console.log(user);
-                res.redirect("/");
+                res.redirect("/home");
             });
         } else {
-            console.log(user);
             res.redirect("/register");
         }
-    });
+     });
+    } else {
+      res.render("register", {message: "Passwords don't match!"});
+    }
 
+});
+
+app.post("/login", (req,res) => {
+    const user = new User({
+        username: req.body.username,
+        password: req.body.password
+    });
+    req.login(user, (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            passport.authenticate("local", { failureRedirect: '/login', failureMessage: true })(req, res, () => {
+                res.redirect("/home");
+            });
+        }
+    });
 });
 
 app.listen(3000, () => {
     console.log("Server running at port 3000");
-})
+});

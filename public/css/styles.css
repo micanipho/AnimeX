@@ -3,6 +3,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #ececec;
 }
+body .body {
+    background-image: url("../images/kaneki.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
 .bg-holder {
     position: absolute;
     width: 100%;
@@ -63,3 +70,50 @@ a:hover {
     color: #ececec;
     background-color: #4D869C;
 }
+
+.glass-box {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.01);
+    z-index: 10;
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+.nav {
+    display: inline-block;
+    width: 100%;
+}
+.logo-img {
+    float: inline-start;
+}
+.navbar-link {
+    justify-content: space-between;
+    float: inline-end;
+    margin: 5rem 3rem 0 0;
+    font-size: 1.5rem;
+}
+.search-bar {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 20rem auto 0 auto;
+    padding: 14px;
+    width: 50vw;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.15);
+}
+ .search-input {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    margin-left: 14px;
+    color: #7AB2B2;
+    outline: none;
+    border: none;
+    flex: 1;
+    background: transparent;
+ }
+ .message {
+    margin-top: 0;
+ }
